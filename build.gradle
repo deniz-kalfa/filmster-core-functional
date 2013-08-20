@@ -1,0 +1,25 @@
+apply plugin: 'groovy'
+apply plugin: 'project-report'
+
+repositories {
+  mavenCentral()
+  mavenLocal()
+}
+
+ext.drivers = ['firefox']
+
+dependencies {
+  groovy 'org.codehaus.groovy:groovy-all:2.1.2'
+
+  def spockVersion = '0.7-groovy-2.0'
+
+  testCompile "org.spockframework:spock-core:$spockVersion"
+
+  testCompile "org.codehaus.groovy.modules.http-builder:http-builder:0.6", {
+    exclude module: "groovy"
+  }
+}
+
+test {
+  systemProperties = System.getProperties()
+}
