@@ -6,6 +6,9 @@ run-app:
 test-app:
 	./gradlew clean test
 
+test-app-ci:
+	./gradlew clean test
+
 setup-app:
 	echo 'No configuration to setup for this project'
 
