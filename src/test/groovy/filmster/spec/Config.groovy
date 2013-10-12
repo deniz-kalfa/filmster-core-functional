@@ -6,7 +6,7 @@ core {
 environments {
   functional01 {
     core {
-      baseUrl = "http://filmster.functional01.core.dk.com"
+      baseUrl = "http://filmster-core-func01.herokuapp.com/"
       baseContext = "/"
     }
   }
